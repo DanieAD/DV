@@ -1,0 +1,26 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: echo "Hi this is my v1 file"
+    displayName: "Welcome msg"
+
+  - script: |
+      echo "Checking Git version"
+      git --version
+    displayName: "Git version"
+
+  - script: |
+      echo "Showing repo files:"
+      ls -R
+    displayName: "Repo files"
+
+  
+
+
+
+
+

@@ -1,0 +1,24 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: echo "Hola desde mi primer pipeline de Azure DevOps!"
+    displayName: "Mensaje de bienvenida"
+
+  - script: |
+      echo "Comprobando versión de git..."
+      git --version
+    displayName: "Mostrar versión de git"
+
+  - script: |
+      echo "Mostrando archivos del repositorio:"
+      ls -R
+    displayName: "Listar archivos del repositorio"
+
+  - script: |
+      echo "Fecha actual:"
+      date
+    displayName: "Mostrar fecha"

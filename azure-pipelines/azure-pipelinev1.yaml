@@ -7,15 +7,16 @@ pool:
     - Agent.Name -equals DESKTOP-7IPU0FA
 
 steps:
-  - script: echo "Hi this is my v1 file"
+  - powershell: |
+      echo "Hi this is my v1 file"
     displayName: "Welcome msg"
 
-  - script: |
+  - powershell: |
       echo "Checking Git version"
       git --version
     displayName: "Git version"
 
-  - script: |
+  - powershell: |
       echo "Showing repo files:"
       Get-ChildItem -Recurse
     displayName: "Repo files"

@@ -17,7 +17,7 @@ steps:
 
   - script: |
       echo "Showing repo files:"
-      ls -R
+      Get-ChildItem -Recurse
     displayName: "Repo files"
 
   
